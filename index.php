@@ -10,10 +10,10 @@ Authentication::showPromptIfNeeded();
 Move the CLI arguments to the $_GET array, in order to be able to use
 rss-bridge from the command line
 */
-if (isset($argv)) {
+if  (isset($argv)) {
 	parse_str(implode('&', array_slice($argv, 1)), $cliArgs);
 	$params = array_merge($_GET, $cliArgs);
-} else {
+}  else {
 	$params = $_GET;
 }
 
